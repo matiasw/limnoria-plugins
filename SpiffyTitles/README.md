@@ -1,3 +1,6 @@
+SpiffyTitles is now being maintained by [matiasw](https://github.com/matiasw)
+Official repository is at https://github.com/matiasw/my-limnoria-plugins/tree/master/SpiffyTitles
+
 Highly customizable and fully-featured link title snarfer with many URL handlers.
 
 Forked from https://github.com/butterscotchstallion/limnoria-plugins/tree/master/SpiffyTitles
@@ -30,8 +33,7 @@ The ONLY gluten-free plugin for displaying link titles.
 Check out the [available options](#available-options)!
 
 ## Install SpiffyTitles
-- install pip if you don't have it already (eg. `apt install python3-pip`)
-- `pip3 install --user --upgrade https://github.com/oddluck/limnoria-plugins.git#subdirectory=SpiffyTitles`
+It can be installed with the PluginDownloader: plugindownloader install appas SpiffyTitles 
 
 You should `!unload Web` and any other plugins that show link titles for best results
 
@@ -85,6 +87,24 @@ Example output:
 `default.fileTemplate` - Template shown for direct file links
 
 Default value: `{% if type %}[{{type}}] {% endif %}{% if size %}({{size}}){% endif %}`
+
+### Twitter/X handler
+
+`twitter.enabled` - Whether to show additional information about Twitter/X links
+
+`twitter.template` - This is the template used when showing the title of a Twitter/X link
+
+Default value: `^ {{text}}`
+
+### Available variables for the Twitter template ###
+
+Variable       | Description
+---------------|------------
+text           | Full tweet text, all inclusive of available variables
+name           | User name
+nick           | User nick (aka @)
+content        | Tweet content
+date           | Date of tweet
 
 ### Youtube handler
 
